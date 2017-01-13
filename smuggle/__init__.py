@@ -14,7 +14,7 @@ def smuggle(module, path):
     Sorry.
     """
     if module in sys.modules:
-        return module
+        return sys.modules[module]
     orig_sys_path = list(sys.path)
     try:
         sys.path.insert(0, path)
